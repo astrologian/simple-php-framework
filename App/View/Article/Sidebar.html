@@ -1,0 +1,7 @@
+<ul>
+  <?php foreach ($articles as $article): ?>
+  <li class="<?= $article->isCurrent() ? 'active' : '' ?>">
+    <a href="/<?= $article->getId() ?>-<?= $article->getName() ?>"><?= $article->getTitle() ?></a>
+  </li>
+  <?php endforeach; ?>
+</ul>
